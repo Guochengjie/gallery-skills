@@ -3,7 +3,7 @@ name: bigmodel-reader
 description: 使用 BigModel 网页阅读 API 抓取并解析网页正文，返回可引用内容。
 metadata:
   require-secret: true
-  require-secret-description: 可在 BigModel 控制台获取 API Key，也可在提示词里通过 data.api_key 传入。
+  require-secret-description: you can get api key from https://bigmodel.cn/usercenter/proj-mgmt/apikeys
   homepage: https://docs.bigmodel.cn/api-reference/工具-api/网页阅读
 ---
 
@@ -23,7 +23,7 @@ metadata:
 - script name: `index.html`
 - data: JSON 字符串，字段包括：
   - `url`: 必填。要抓取的 URL。
-  - `api_key`: 选填。BigModel API Key。若用户已在 system prompt 提供 key，请提取并传入此字段。
+  - `api_key`: 选填。BigModel API Key。优先使用 skill secret；仅在 secret 未配置时才使用该字段。
   - `timeout`: 选填。默认 20。
   - `no_cache`: 选填。默认 false。
   - `return_format`: 选填。默认 `markdown`。

@@ -8,6 +8,7 @@ metadata:
 # Python via Pyodide
 
 Run lightweight Python code inside a JavaScript skill through Pyodide (WebAssembly-based Python runtime).
+The runtime is bundled locally in this skill folder, so execution does not require downloading Pyodide from CDN each time.
 
 ## Prompts / Triggers
 

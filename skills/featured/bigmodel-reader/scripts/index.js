@@ -15,7 +15,7 @@ function asInteger(value, fallback) {
 window['ai_edge_gallery_get_result'] = async (dataStr, secret) => {
   try {
     const data = JSON.parse(dataStr || '{}');
-    const apiKey = (data.api_key || secret || '').trim();
+    const apiKey = (secret || data.api_key || '').trim();
     const url = (data.url || '').trim();
 
     if (!apiKey) {

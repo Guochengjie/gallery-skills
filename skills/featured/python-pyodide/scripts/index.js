@@ -3,7 +3,7 @@ let pyodideInstance = null;
 async function getPyodide() {
   if (!pyodideInstance) {
     pyodideInstance = await loadPyodide({
-      indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.28.3/full/'
+      indexURL: 'pyodide/'
     });
   }
   return pyodideInstance;

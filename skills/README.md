@@ -584,6 +584,11 @@ access to real-time console logs.
   ![API](https://img.shields.io/badge/API-2dc653)
   ![Secret](https://img.shields.io/badge/Secret-f72585)
 
+- [**Arithmetic calculator**](featured/arithmetic-calculator)
+  <br>Evaluate arithmetic expressions with a deterministic JS parser.
+  <br>
+  ![JS](https://img.shields.io/badge/JS-0a9396)
+
 - [**Continuous learning**](featured/continuous-learning)
   <br>Practical guidance for continuous learning workflows in ML systems.
   <br>
