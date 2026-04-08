@@ -4,9 +4,11 @@ Simple wttr.in-based weather query skill.
 
 ## Secret
 
-Set skill secret to weather host URL, for example:
+Set skill secret to default city, for example:
 
-- https://wttr.in
+- London
+
+If `location` is provided in request data, it overrides the secret city.
 
 ## Example
 

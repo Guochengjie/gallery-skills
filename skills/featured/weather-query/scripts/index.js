@@ -1,22 +1,19 @@
-function normalizeBaseUrl(secret) {
-  const s = (secret || '').trim();
-  if (!s) return 'https://wttr.in';
-  return s.endsWith('/') ? s.slice(0, -1) : s;
-}
+const WEATHER_BASE_URL = 'https://wttr.in';
 
 window['ai_edge_gallery_get_result'] = async (dataStr, secret) => {
   try {
     const data = JSON.parse(dataStr || '{}');
-    const location = String(data.location || '').trim();
+    const location = String(data.location || secret || '').trim();
     const format = String(data.format || '%l:+%c+%t+%h+%w');
 
     if (!location) {
-      return JSON.stringify({error: 'Missing required field: location'});
+      return JSON.stringify({
+        error: 'Missing location. Provide data.location or set a default city in skill secret.'
+      });
     }
 
-    const baseUrl = normalizeBaseUrl(secret);
     const locationPath = encodeURIComponent(location).replace(/%20/g, '+');
-    const url = `${baseUrl}/${locationPath}?format=${encodeURIComponent(format)}`;
+    const url = `${WEATHER_BASE_URL}/${locationPath}?format=${encodeURIComponent(format)}`;
 
     const response = await fetch(url);
     const text = (await response.text()).trim();

@@ -1,9 +1,9 @@
 ---
 name: weather-query
-description: Query weather from wttr.in with compact output. Put the weather host URL in skill secret.
+description: Query weather from wttr.in with compact output. Put your default city name in skill secret.
 metadata:
   require-secret: true
-  require-secret-description: put weather host in secret, e.g. https://wttr.in
+  require-secret-description: put default city in secret, e.g. London
   homepage: https://clawhub.ai/steipete/weather
 ---
 
@@ -17,17 +17,20 @@ Get current weather quickly using wttr.in style formatting.
 - "Weather in New York now"
 - "Show current weather for Tokyo"
 
+
+
 ## Instructions
 
 Call the `run_js` tool with the following exact parameters:
 - script name: `index.html`
 - data: A JSON string with fields:
-  - `location`: Required. City/location, e.g. `London`, `New York`, `JFK`.
+  - `location`: Optional. City/location, e.g. `London`, `New York`, `JFK`.
   - `format`: Optional. wttr format string. Default: `%l:+%c+%t+%h+%w`
 
 Secret usage:
-- Use the skill secret as weather host URL (for example `https://wttr.in`).
-- If secret is not provided, fallback to `https://wttr.in`.
+- Use the skill secret as default city name (for example `London`).
+- If `location` is provided in data, it overrides the secret city.
+- Weather host is fixed to `https://wttr.in`.
 
 Output requirements:
 - Return concise weather text first.
