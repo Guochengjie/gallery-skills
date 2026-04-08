@@ -570,6 +570,37 @@ access to real-time console logs.
   ![Webview](https://img.shields.io/badge/Webview-ee9b00)
   ![Secret](https://img.shields.io/badge/Secret-f72585)
 
+- [**BigModel web search**](featured/bigmodel-web-search)
+  <br>Use BigModel Web Search API for online retrieval with citation-ready sources.
+  <br>
+  ![JS](https://img.shields.io/badge/JS-0a9396)
+  ![API](https://img.shields.io/badge/API-2dc653)
+  ![Secret](https://img.shields.io/badge/Secret-f72585)
+
+- [**BigModel reader**](featured/bigmodel-reader)
+  <br>Fetch and parse webpage content via BigModel Reader API.
+  <br>
+  ![JS](https://img.shields.io/badge/JS-0a9396)
+  ![API](https://img.shields.io/badge/API-2dc653)
+  ![Secret](https://img.shields.io/badge/Secret-f72585)
+
+- [**Continuous learning**](featured/continuous-learning)
+  <br>Practical guidance for continuous learning workflows in ML systems.
+  <br>
+  ![Text](https://img.shields.io/badge/Text-777777)
+
+- [**Soul**](featured/soul)
+  <br>Embody a defined digital identity with consistent worldview, voice, and boundaries.
+  <br>
+  ![Text](https://img.shields.io/badge/Text-777777)
+
+- [**Python via Pyodide**](featured/python-pyodide)
+  <br>Run lightweight Python snippets with Pyodide in a JS skill runtime.
+  <br>
+  ![JS](https://img.shields.io/badge/JS-0a9396)
+  ![Python](https://img.shields.io/badge/Python-3776AB)
+  ![WASM](https://img.shields.io/badge/WASM-654FF0)
+
 - [**Send email**](built-in/send-email)
   <br>Send an email.
   <br>
