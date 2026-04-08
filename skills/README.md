@@ -589,6 +589,20 @@ access to real-time console logs.
   <br>
   ![JS](https://img.shields.io/badge/JS-0a9396)
 
+- [**Weather query**](featured/weather-query)
+  <br>Query current weather from wttr.in with host URL provided via skill secret.
+  <br>
+  ![JS](https://img.shields.io/badge/JS-0a9396)
+  ![API](https://img.shields.io/badge/API-2dc653)
+  ![Secret](https://img.shields.io/badge/Secret-f72585)
+
+- [**X search**](featured/x-search)
+  <br>Search X posts via xAI Responses API and return citation links.
+  <br>
+  ![JS](https://img.shields.io/badge/JS-0a9396)
+  ![API](https://img.shields.io/badge/API-2dc653)
+  ![Secret](https://img.shields.io/badge/Secret-f72585)
+
 - [**Continuous learning**](featured/continuous-learning)
   <br>Practical guidance for continuous learning workflows in ML systems.
   <br>

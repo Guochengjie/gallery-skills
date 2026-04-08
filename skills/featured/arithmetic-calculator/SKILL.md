@@ -20,7 +20,17 @@ Use this skill for arithmetic evaluation to avoid mental-math mistakes.
 Call the `run_js` tool with the following exact parameters:
 - script name: `index.html`
 - data: A JSON string with fields:
-  - `expression`: Required. A math expression string (supports numbers, `+`, `-`, `*`, `/`, and parentheses).
+  - `expression`: Required. A math expression string.
+
+Supported syntax:
+- Numbers (integers/decimals)
+- Operators: `+`, `-`, `*`, `/`, `%`
+- Parentheses: `(`, `)`
+- Power: `^`, `**`, or `power(a, b)`
+- Square root: `sqrt(x)`
+- Absolute value: `abs(x)`
+- Rounding: `floor(x)`, `ceil(x)`, `round(x)`
+- Alias: `mod` (same as `%`)
 
 Behavior requirements:
 - For all arithmetic or numeric calculations, you MUST invoke this skill first.
