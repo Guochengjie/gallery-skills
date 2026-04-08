@@ -24,7 +24,7 @@ Call the `run_js` tool with the following exact parameters:
 Execution requirements:
 - MUST call both endpoints in parallel:
   - `https://myip.ipip.net/json`
-  - `https://api.ip2location.io/`
+  - `https://api.ip.sb/geoip/`
 - MUST enforce a 3-second timeout per endpoint.
 - Return both endpoint results (or per-endpoint timeout/error).
 
@@ -35,4 +35,4 @@ Output requirements:
 ## Citation
 
 - https://myip.ipip.net/json
-- https://api.ip2location.io/
+- https://api.ip.sb/geoip/

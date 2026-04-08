@@ -1,6 +1,6 @@
 const ENDPOINTS = [
   {name: 'ipip', url: 'https://myip.ipip.net/json'},
-  {name: 'ip2location', url: 'https://api.ip2location.io/'}
+  {name: 'ipsb', url: 'https://api.ip.sb/geoip/'}
 ];
 
 async function fetchWithTimeout(endpoint, timeoutMs) {
@@ -75,12 +75,12 @@ function summarize(results) {
       continue;
     }
 
-    if (item.source === 'ip2location') {
+    if (item.source === 'ipsb') {
       const ip = item.data?.ip || 'unknown';
       const location = [
-        item.data?.country_name,
-        item.data?.region_name,
-        item.data?.city_name
+        item.data?.country,
+        item.data?.region,
+        item.data?.city
       ]
         .filter(Boolean)
         .join(' ');
